@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h5, h6, p {
+  margin-bottom: 16px;
+}
+
+.bottom {
+  font-family: MarkOT-Regular, Helvetica, Arial, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 40px;
+}
+.bottom a {
+  margin-right: 40px;
+  color: black;
+  text-decoration: none;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 10px;
+}
+.bottom a#red {
+  color: red;
+}
+.bottom a i {
+  padding-left: 10px;
+}
+.bottom a:hover {
+  background-color: lightgray;
+}
+
+.bottom-mobile {
+  width: calc(100% - 10px);
+  margin: 0 auto;
+}
+.bottom-mobile input {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border: solid lightgray, 0.5px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  background-color: whitesmoke;
+}
+.bottom-mobile input ::-webkit-input-placeholder {
+  font-family: MarkOT-Regular;
+  font-weight: 300;
+}
+.bottom-mobile input ::-moz-placeholder {
+  font-family: MarkOT-Regular;
+  font-weight: 300;
+}
+.bottom-mobile input :-ms-input-placeholder {
+  font-family: MarkOT-Regular;
+  font-weight: 300;
+}
+.bottom-mobile input ::-ms-input-placeholder {
+  font-family: MarkOT-Regular;
+  font-weight: 300;
+}
+.bottom-mobile input ::placeholder {
+  font-family: MarkOT-Regular;
+  font-weight: 300;
+}
+.bottom-mobile input:focus {
+  border: none;
+}
+.bottom-mobile .deals {
+  font-family: MarkOT-Regular, Helvetica, Arial, sans-serif;
+  width: 100%;
+  height: 45px;
+  background-color: lightgray;
+  text-align: center;
+  line-height: 30px;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+.bottom-mobile .deals span {
+  font-size: 40px;
+  font-weight: 100;
+  position: relative;
+  bottom: -8px;
+}
+
+@media screen and (max-width: 1300px) {
+  .bottom a {
+    margin-right: 15px;
+  }
+  .bottom .special {
+    display: none;
+  }
+}

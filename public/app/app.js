@@ -23,16 +23,23 @@ function route(){
     //pageID holds page name
 
     if(!pageID){
-        MODEL.changePage("home");    
+        MODEL.changePage("home");   
            
     }else{
         MODEL.changePage(pageID);
     }
 }
 
+function initlisteners(){
+    $(window).on("hashchange", route);
+    
+    
+    route();
+}
 
 $(document).ready(function(){
     try{
+        initlisteners();
         initFirebase();
         route();
        // initlistener();

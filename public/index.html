@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Welcome to Firebase Hosting</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <script defer src="/__/firebase/9.5.0/firebase-app-compat.js"></script>
@@ -35,6 +39,30 @@
       defer
       src="/__/firebase/9.5.0/firebase-performance-compat.js"
     ></script>
+    <nav class="top">
+      <div class="logo"></div>
+      <div class="search"></div>
+      <div class="right"></div>
+    </nav>
+    <nav class="bottom">
+      <a href="">COFFEE, TEA & MORE</a>
+      <a href="">COFFEE MAKERS</a>
+      <a href="">ACCESORIES</a>
+      <a href="">AUTO DELIVERY</a>
+      <a href="">GET STARTED</a>
+      <a href="">GIFT GUIDE</a>
+      <a href="" class="special" id="red"
+        ><i class="fa fa-tag fa-flip-horizontal"></i> DEALS</a
+      >
+      <a href="" class="special">CUSTOMIZE</a>
+    </nav>
+    <nav class="top-mobile"></nav>
+    <nav class="bottom-mobile">
+      <input type="text" placeholder="Search hundreds of ways to brew..." />
+      <div class="deals">TODAYS DEALS <span>+</span></div>
+      <div></div>
+    </nav>
+    <div id="app"></div>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="lib/jquery-3.6.0.min.js"></script>
