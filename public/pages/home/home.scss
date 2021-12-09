@@ -90,6 +90,35 @@
         
     }
 
+    .makers{
+
+        max-width: 1200px;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        margin: 0 auto;
+        margin-top: 10px;
+        flex-wrap: wrap;
+        background-color: indigo;
+
+        .maker{
+            margin-top: 20px;
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+          // max-width: 280px;
+          // min-width:230px;
+          width: 23.3%;
+            height: 400px;
+            background-color: indianred;
+
+        }
+        .maker:hover{
+            border: solid black 1.5px;
+        }
+
+    }
+
 }
 .home__filters__select:hover{
     color: black;
@@ -98,6 +127,20 @@
        color: black;
     }
 
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+   
+    .maker{
+        width: 31.81%;
+    }
+}
+
+
+@media (max-width: 767px){
+.maker{
+    width: 47.26%;
+}
 }
 
 @media screen and (max-width: 990px) {
