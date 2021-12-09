@@ -1,10 +1,129 @@
 .top{
-    
+   height: 40px;
+   margin-left: 50px;
+   margin-right: 50px;
+   margin-top: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   //padding-bottom: 40px;
+
+    .logo{
+        height: 40px;
+        width: 180px;
+        margin-right: 26px;
+        background-image: linear-gradient(
+          to right,  
+            rgba(0, 0, 0, 0.0),
+            rgba(0, 0, 0, 0.0)
+          ),
+        url("../img/keurig-logo.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        //background-size: cover;
+      //  object-fit: fill;
+    }
+
+    .search{
+        background-color: whitesmoke;
+
+        width: 500px;
+        border-radius: 40px;
+        overflow: hidden;
+        border:solid lightgray 0.5px;
+        i{
+            line-height: 40px;
+            font-size: 30px;
+           position: relative;
+           left: 10px;
+            bottom: -3px;
+            cursor: pointer;
+        }
+        
+        input{
+            position: relative;
+            left: 40px;
+            background-color: whitesmoke;
+            height: 45px;
+            border: none;
+            width: 200px;
+        }
+
+    }
+
+    .right{
+        display: block;
+        height: 40px;
+        //background-color: lightgreen;
+        text-align: center;
+        line-height: 40px;
+        width: 300px;
+
+        .text{
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        i{
+          //  display: block;
+            margin-left: 26px;
+            font-size: 36px;
+
+        }
+    }
+
+}
+
+.top-mobile{
+    overflow: hidden;
+    margin-top: 30px;
+    width: calc(100% - 5px);
+    height: 50px;
+ //   background-color: aquamarine;
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+    .left{
+        i{
+            margin-left: 26px;
+            font-size: 36px;
+        }
+    }
+    .logo{
+        margin: 0 auto; 
+       height: 40px;
+        width: 180px;
+       // margin-right: 26px;
+        background-image: linear-gradient(
+          to right,  
+            rgba(0, 0, 0, 0.0),
+            rgba(0, 0, 0, 0.0)
+          ),
+        url("../img/keurig-logo.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        //background-size: cover;
+      //  object-fit: fill;
+    }
+    .right{
+        display: block;
+        margin-right: 20px;
+        i{
+            margin-left: 26px;
+            font-size: 36px;
+        }
+        
+       
+    }
 
 }
 
 .bottom{
-    font-family: MarkOT-Regular, Helvetica, Arial, sans-serif;
+    
+    margin-top: 30px;
+    font-family:  Arial, Helvetica, sans-serif;
     display: flex;
     font-size: 16px;
     align-items: center;
@@ -24,6 +143,9 @@
         padding-left: 8px;
         padding-right: 8px;
         border-radius: 10px;
+        font-family:  Arial, Helvetica, sans-serif;
+        font-weight: 200;
+
         //margin: 0 auto;
 
 
@@ -44,7 +166,7 @@
 }
 
 .bottom-mobile{
-   // display: none;
+   display: none;
    width: calc(100% - 10px);
   // font-family: MarkOT-Regular, Helvetica, Arial, sans-serif;
    margin: 0 auto;
@@ -95,6 +217,12 @@
 
 @media screen and (max-width: 1300px) {
 
+   .top{
+       .search{
+           width: 350px;
+       }
+   }
+
     .bottom{
         a{
             margin-right: 15px;
@@ -107,5 +235,22 @@
 }
 
 @media screen and (max-width: 990px) {
+
+    .top{
+        display: none;
+    }
+
+    .top-mobile{
+        display: flex;
+    }
+    .bottom{
+        display: none;
+    }
+    
+    .bottom-mobile{
+        display: block;
+    }
+
+
 
 }
