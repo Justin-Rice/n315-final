@@ -39,6 +39,7 @@
       defer
       src="/__/firebase/9.5.0/firebase-performance-compat.js"
     ></script>
+    
     <nav class="top">
       <div class="logo"></div>
       <div class="search">
@@ -48,9 +49,11 @@
       <div class="right">
           <div class="right"> <div class="text">
             FREE SHIPPING $29+ 
-            <i class="fa fa-user fa-xl"></i>
-             <i class="fa fa-shopping-cart fa-xl"></i></div>
-         
+          
+            <i onclick="loginLoad()" class="fa fa-user fa-xl"></i>
+       
+            <a href="#"><i class="fa fa-shopping-cart fa-xl"></i></a> </div>
+            
         </div>
      
     </nav>
@@ -71,8 +74,8 @@
       </div>
       <div class="logo"></div>
       <div class="right">
-          <i class="fa fa-user fa-xl"></i> 
-          <i class="fa fa-shopping-cart fa-xl"></i>
+          <i  class="fa fa-user fa-xl"></i> 
+          <i  id="shop" class="fa fa-shopping-cart fa-xl"></i>
       </div>
 
     </nav>
@@ -81,6 +84,26 @@
       <div class="deals">TODAYS DEALS <span>+</span></div>
       <div></div>
     </nav>
+    <div class="login-form">
+      <div class="close">X</div>
+      <div class="holder">
+        <div class="login">
+          SIGN UP
+          <div class="input__holder">
+            <input id="email" type="text" placeholder="Email Address">
+            <input id="pw" type="password" placeholder="Password">
+            <button onclick="createUser()" class="button" id="signup">Signup</button>
+        </div>
+        </div>
+        <div class="login"> 
+          LOG IN
+          <div class="input__holder">
+          <input id="email-li" type="text" placeholder="Email Address">
+          <input id="pw-li" type="password" placeholder="Password">
+          <button onclick="logInUser()" class="button" id="logIn">Login</button>
+      </div></div>
+      </div>
+    </div>
     <div id="app"></div>
     <footer>
       <div class="footer-top-mobile">
