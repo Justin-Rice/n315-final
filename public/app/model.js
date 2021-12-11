@@ -23,7 +23,7 @@ var MODEL = (function(){
                   </div>
 
                     `)
-                    console.log(index)
+                    //console.log(index)
 
                 });
             });
