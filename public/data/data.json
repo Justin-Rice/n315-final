@@ -3,22 +3,62 @@
     {
       "makerImage": "maker1.webp",
       "makerName": "K-Supreme Plus® SMART Single Serve Coffee Maker",
-      "makerPrice": "199.99"
+      "makerPrice": 199.99
     },
     {
-      "makerImage": "maker1.webp",
-      "makerName": "K-Supreme Plus® SMART Single Serve Coffee Maker",
-      "makerPrice": "199.99"
+      "makerImage": "maker2.webp",
+      "makerName": "K-Mini® Single Serve Coffee Maker",
+      "makerPrice": 79.99
     },
     {
-      "makerImage": "maker1.webp",
-      "makerName": "K-Supreme Plus® SMART Single Serve Coffee Maker",
-      "makerPrice": "199.99"
+      "makerImage": "maker3.webp",
+      "makerName": "Keurig® K-Select® Coffee Maker",
+      "makerPrice": 99.99
     },
     {
-      "makerImage": "maker1.webp",
-      "makerName": "K-Supreme Plus® SMART Single Serve Coffee Maker",
-      "makerPrice": "199.99"
+      "makerImage": "maker4.webp",
+      "makerName": "Keurig® K-Elite® Single Serve Coffee Maker",
+      "makerPrice": 179.99
+    },
+    {
+      "makerImage": "maker5.webp",
+      "makerName": "K-Café® Single Serve Coffee Latte & Cappuccino Maker",
+      "makerPrice": 179.99
+    },
+    {
+      "makerImage": "maker6.webp",
+      "makerName": " K-Slim® Single Serve Coffee Maker",
+      "makerPrice": 89.99
+    },
+    {
+      "makerImage": "maker7.webp",
+      "makerName": "K-Mini Plus® Single Serve Coffee Maker",
+      "makerPrice": 99.99
+    },
+    {
+      "makerImage": "maker8.webp",
+      "makerName": "K-Duo™ Single Serve & Carafe Coffee Maker",
+      "makerPrice": 169.99
+    },
+    {
+      "makerImage": "maker9.webp",
+      "makerName": "Keurig® K-Supreme® Single Serve Coffee Maker",
+      "makerPrice": 119.99
+    },
+    {
+      "makerImage": "maker10.webp",
+      "makerName": "K-Duo Plus™ Single Serve & Carafe Coffee Maker",
+      "makerPrice": 199.99
+    },
+    {
+      "makerImage": "maker11.webp",
+      "makerName": "K-Duo® Special Edition Single Serve & Carafe Coffee Maker",
+      "makerPrice": 199.99
+    },
+    {
+      "makerImage": "maker12.webp",
+      "makerName": "K-Café® Special Edition Single Serve Coffee Latte & Cappuccino Maker",
+      "makerPrice": 199.99
     }
   ]
 }

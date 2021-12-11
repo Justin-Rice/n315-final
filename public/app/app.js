@@ -17,6 +17,77 @@ var toastMixin = Swal.mixin({
   }
 });
 
+function loadCart(){
+  let total  = 0;
+
+  if(cart.length == 0){
+    $(".cart").append(
+      `
+      <div class="empty">
+    <div class="text">You don't have any items in your shopping cart.</div>
+  </div>
+      `
+    )
+  }else{
+   
+      
+    $(".cart").append(
+      `
+      <div class="holder">
+      <div class="title">
+      <h1>Regular Purchases</h1>
+      <h2>These items will be processed today and ship right away.</h2>
+    </div>
+  
+    </div>
+      `
+    )
+    $.each(cart, function(index, maker){
+     // console.log(maker.makerImage);
+      $(".holder").append(
+        `
+     
+      <div class="flex">
+        <div class="cart-item">
+          <img src="../img/${maker.makerImage}" />
+          <div class="name">
+          ${maker.makerName}
+          </div>
+          <div class="price"> ${maker.makerPrice}</div>
+        </div>
+      </div>
+     
+      `
+      )
+      total = (Number(total) + Number(cart[index].makerPrice )).toFixed(2)
+
+    });
+      //console.log(cart[1].makerPrice)
+      
+
+      // for(let x =0; x < cart.length; x++){
+      //   //total += parseFloat(cart[x].makerPrice )
+       
+      //   //console.log(parseFloat(cart[x].makerPrice ))
+       
+       //console.log(total)
+      // } 
+    $(".holder").append(`
+    <div class="extra">
+    <div class="empty-cart" onclick="emptyCart()">Empty Cart</div>
+    <div class="total" id="total">Subtotal (${cart.length}) items :$${total}</div>
+  </div>
+  `);
+
+
+  }
+
+
+}
+function emptyCart(){
+  location.reload();
+}
+
 function initFirebase(){
     firebase
     .auth()
@@ -26,10 +97,10 @@ function initFirebase(){
             loggedIn = true;
         
 
-            console.log("user detected");
+           // console.log("user detected");
         }else{
             loggedIn = false;
-            console.log("user not there");
+            //console.log("user not there");
         }
     })
 
@@ -46,8 +117,11 @@ function route(){
     }else if(pageID == "home"){
         MODEL.changePage("home", MODEL.loadMakers);   
 
+    }else if(pageID == "cart"){
+        MODEL.changePage("cart", loadCart);
     }else{
-        MODEL.changePage(pageID);
+      MODEL.changePage(pageID);
+
     }
 }
 function createUser(){
@@ -139,9 +213,8 @@ function addToCart(index){
     $.getJSON("data/data.json", function(makers){
       if(loggedIn == true){
         newItem.makerName = makers._MAKERS[index].makerName;
-        newItem.makerImage =  makers._MAKERS[index].makerimage;
+        newItem.makerImage =  makers._MAKERS[index].makerImage;
         newItem.makerPrice = makers._MAKERS[index].makerPrice;
-
         if(cartLength == 0){
           cart.push(newItem)
           cartLength = cart.length;
@@ -182,7 +255,8 @@ function addToCart(index){
 
       }
 
-    console.log(makers._MAKERS[index].makerPrice);
+    //console.log(makers._MAKERS[index].makerPrice);
+    //.log(cart.makerImage);
 });
 
 }
@@ -190,7 +264,7 @@ function initlisteners(){
     $(window).on("hashchange", route);
 if(!loggedIn == true){
     $(".fa-user").click(function(){
-        console.log('thing')
+       // console.log('thing')
         $(".login-form").css("display", "inline-block");
     });
 
@@ -232,7 +306,7 @@ if(!loggedIn == true){
               })
               firebase.auth().signOut().then(() => {
                 // Sign-out successful.
-                console.log(loggedIn)
+                //console.log(loggedIn)
               }).catch((error) => {
                 // An error happened.
               });
